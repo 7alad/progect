@@ -10,10 +10,58 @@
         android:id="@+id/editTextTextEmailAddress"
         android:layout_width="252dp"
         android:layout_height="44dp"
+        android:layout_marginStart="79dp"
+        android:layout_marginTop="293dp"
+        android:layout_marginEnd="80dp"
         android:ems="10"
         android:hint="Enter password or number"
         android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_back_into_register" />
+
+    <Button
+        android:id="@+id/button_back_into_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="318dp"
+        android:layout_marginBottom="293dp"
+        android:backgroundTint="#B8E2C8"
+        android:onClick="Back"
+        android:text="Back"
+        android:textColor="#A4B8C4"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextEmailAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextTextEmailAddress2"
+        android:layout_width="255dp"
+        android:layout_height="42dp"
+        android:ems="10"
+        android:hint="Enter e-mail"
+        android:inputType="textEmailAddress"
         tools:layout_editor_absoluteX="79dp"
-        tools:layout_editor_absoluteY="274dp" />
+        tools:layout_editor_absoluteY="417dp" />
+
+    <Button
+        android:id="@+id/button_registor_new_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="155dp"
+        android:layout_marginTop="67dp"
+        android:layout_marginEnd="155dp"
+        android:layout_marginBottom="157dp"
+        android:backgroundTint="#A5C882"
+        android:onClick="NewInfo"
+        android:text="Register"
+        android:textColor="#4E6766"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

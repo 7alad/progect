@@ -12,16 +12,18 @@ public class MainActivity extends AppCompatActivity {
 
     EditText email_edittxt;
     EditText password_edittxt;
+    Button button_entrance;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
     }
     public void chek_email(){
         email_edittxt = findViewById(R.id.email);
         password_edittxt = findViewById(R.id.password);
-        Button button_entrance = findViewById(R.id.button2);
+        button_entrance = findViewById(R.id.button_entrance);
         button_entrance.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -31,11 +33,9 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-
-
     }
     public void register(){
-        Button button_register = findViewById(R.id.button2);
+        Button button_register = findViewById(R.id.button_register);
         button_register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
