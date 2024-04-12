@@ -7,10 +7,28 @@
     tools:context=".WorkActivity">
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/exit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="exit_onclick"
         android:text="exit"
         tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp" />
+        tools:layout_editor_absoluteY="0dp" />
+
+    <Button
+        android:id="@+id/stq"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="set_questions"
+        android:text="set question"
+        tools:layout_editor_absoluteX="26dp"
+        tools:layout_editor_absoluteY="407dp" />
+
+    <Button
+        android:id="@+id/chq"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="chek questions"
+        tools:layout_editor_absoluteX="242dp"
+        tools:layout_editor_absoluteY="407dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

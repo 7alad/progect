@@ -20,27 +20,17 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
     }
-    public void chek_email(){
+    public void chek_email(View v){
         email_edittxt = findViewById(R.id.email);
         password_edittxt = findViewById(R.id.password);
         button_entrance = findViewById(R.id.button_entrance);
         button_entrance.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (email_edittxt.getText().toString().equals("salat@mail.ru") && password_edittxt.getText().toString().equals("12345")){
-                    Intent intent = new Intent(MainActivity.this,WorkActivity.class);
+                if (email_edittxt.getText().toString().equals("salat") && password_edittxt.getText().toString().equals("12345")){
+                    Intent intent = new Intent(MainActivity.this, WorkActivity.class);
                     startActivity(intent);
                 }
-            }
-        });
-    }
-    public void register(){
-        Button button_register = findViewById(R.id.button_register);
-        button_register.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,RegisterActivity.class);
-                startActivity(intent);
             }
         });
     }
