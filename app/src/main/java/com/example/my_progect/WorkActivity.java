@@ -10,6 +10,7 @@ import android.widget.Button;
 public class WorkActivity extends AppCompatActivity {
     Button button_exit;
     Button stq;
+    Button chq;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,12 +26,22 @@ public class WorkActivity extends AppCompatActivity {
             }
         });
     }
-    public void set_questions(){
+    public void set_questions(View v){
         stq = findViewById(R.id.stq);
         stq.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(WorkActivity.this,set_questionsActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
+    public void chek_questions(View v){
+        chq = findViewById(R.id.chq);
+        chq.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(WorkActivity.this,Chek_questionsActivity.class);
                 startActivity(intent);
             }
         });

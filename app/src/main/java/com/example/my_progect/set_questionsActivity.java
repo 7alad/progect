@@ -14,7 +14,7 @@ public class set_questionsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_set_questions);
     }
-    public void set_questions(){
+    public void save_que(View v){
 
     }
 }

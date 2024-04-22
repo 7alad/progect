@@ -6,4 +6,48 @@
     android:layout_height="match_parent"
     tools:context=".set_questionsActivity">
 
+    <EditText
+        android:id="@+id/zagolovok"
+        android:layout_width="175dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="118dp"
+        android:layout_marginTop="272dp"
+        android:layout_marginEnd="118dp"
+        android:hint="        Заголовок"
+        android:inputType="text"
+        android:textColorHint="#808080"
+        app:layout_constraintBottom_toTopOf="@+id/name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="268dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="71dp"
+        android:layout_marginTop="34dp"
+        android:layout_marginEnd="72dp"
+        android:ems="10"
+        android:hint="Кому:"
+        android:inputType="text"
+        android:textColorHint="#808080"
+        app:layout_constraintBottom_toTopOf="@+id/opisanie_zadachi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/zagolovok" />
+
+    <EditText
+        android:id="@+id/opisanie_zadachi"
+        android:layout_width="338dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="47dp"
+        android:layout_marginTop="41dp"
+        android:layout_marginBottom="255dp"
+        android:hint="Описание задачи:"
+        android:inputType="text"
+        android:textColorHint="#808080"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name" />
 </androidx.constraintlayout.widget.ConstraintLayout>
