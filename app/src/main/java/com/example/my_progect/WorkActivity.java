@@ -11,13 +11,14 @@ public class WorkActivity extends AppCompatActivity {
     Button button_exit;
     Button stq;
     Button chq;
+    Button create_u;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_work);
     }
     public void exit_onclick(){
-        button_exit = findViewById(R.id.exit);
+        button_exit = findViewById(R.id.back);
         button_exit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -42,6 +43,16 @@ public class WorkActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(WorkActivity.this,Chek_questionsActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
+    public void Create_user() {
+        create_u = findViewById(R.id.create_user);
+        create_u.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(WorkActivity.this, Create_UserActivity.class);
                 startActivity(intent);
             }
         });
