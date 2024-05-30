@@ -7,12 +7,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class set_questionsActivity extends AppCompatActivity {
     Button button_back;
+    Button save;
     EditText zag;
     EditText name;
     EditText op_zad;
@@ -29,18 +31,38 @@ public class set_questionsActivity extends AppCompatActivity {
 
     public void save_que(View v) {
         zag = findViewById(R.id.zagolovok);
-        name = findViewById(R.id.name);
+        name = findViewById(R.id.imya);
         op_zad = findViewById(R.id.opisanie_zadachi);
 
         String zag_ok = zag.getText().toString();
-        mDatabase.child("zagolovok").setValue(zag_ok);
         String dlya = name.getText().toString();
-        mDatabase.child("dlya_kogo").setValue(dlya);
         String content = op_zad.getText().toString();
-        mDatabase.child("content").setValue(content);
+        int i = 0;
+        if(zag_ok != "" && dlya != ""&& content != ""){
+            mDatabase.child("zagolovok").setValue(zag_ok);
+            mDatabase.child("dlya_kogo").setValue(dlya);
+            mDatabase.child("content").setValue(content);
+            mDatabase.child("id_que").setValue(i);
+            i++;
+        }
+        else{
+            Toast.makeText(getApplicationContext(), "Check question", Toast.LENGTH_LONG).show();
+            return;
+        }
+    }
+    public void Save(View v) {
+        save = findViewById(R.id.save);
+        save.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                save_que(v);
+            }
+        });
     }
 
-    public void Back() {
+
+    public void Back(View v) {
         button_back = findViewById(R.id.back);
         button_back.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -31,13 +31,13 @@ public class MainActivity extends AppCompatActivity {
     }
     public void chek_email(View v){
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference passwords = database.getReference("userLoginData").child("User1").child("password");
-        DatabaseReference logins = database.getReference("userLoginData").child("User1").child("email");
+        DatabaseReference passwords = database.getReference("users").child("password");
+        DatabaseReference email = database.getReference("users").child("email");
 
         final String[] userLogin = {null};
         final String[] userPassword = {null};
 
-        logins.get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+        email.get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
             @Override
             public void onComplete(@NonNull Task<DataSnapshot> task) {
                 if (!task.isSuccessful()) {

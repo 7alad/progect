@@ -8,21 +8,21 @@
 
     <EditText
         android:id="@+id/zagolovok"
-        android:layout_width="175dp"
-        android:layout_height="38dp"
+        android:layout_width="201dp"
+        android:layout_height="42dp"
         android:layout_marginStart="118dp"
         android:layout_marginTop="272dp"
         android:layout_marginEnd="118dp"
         android:hint="        Заголовок"
         android:inputType="text"
         android:textColorHint="#808080"
-        app:layout_constraintBottom_toTopOf="@+id/name"
+        app:layout_constraintBottom_toTopOf="@+id/imya"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/name"
+        android:id="@+id/imya"
         android:layout_width="268dp"
         android:layout_height="42dp"
         android:layout_marginStart="71dp"
@@ -49,7 +49,7 @@
         android:textColorHint="#808080"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/name" />
+        app:layout_constraintTop_toBottomOf="@+id/imya" />
 
     <Button
         android:id="@+id/back"
@@ -61,7 +61,7 @@
         android:layout_marginBottom="295dp"
         android:onClick="Back"
         android:text="back"
-        app:layout_constraintBottom_toTopOf="@+id/name"
+        app:layout_constraintBottom_toTopOf="@+id/imya"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -74,7 +74,7 @@
         android:layout_marginTop="58dp"
         android:layout_marginEnd="167dp"
         android:layout_marginBottom="149dp"
-        android:onClick="save_que"
+        android:onClick="Save"
         android:text="save"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

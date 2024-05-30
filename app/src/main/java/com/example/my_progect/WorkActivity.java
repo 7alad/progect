@@ -6,12 +6,19 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
+
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class WorkActivity extends AppCompatActivity {
     Button button_exit;
     Button stq;
     Button chq;
     Button create_u;
+    TextView zagol;
+    TextView dlya_k;
+    TextView content_inf;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,8 +54,9 @@ public class WorkActivity extends AppCompatActivity {
             }
         });
     }
-    public void Create_user() {
+    public void Create_user(View v) {
         create_u = findViewById(R.id.create_user);
+
         create_u.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
